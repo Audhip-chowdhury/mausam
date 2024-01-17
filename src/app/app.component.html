@@ -1,10 +1,16 @@
+<div class="search-box">
+  <input type="text" #city />
+  <button (click)="onClick(city.value)">Search</button>
+</div>
+
 <div class="container">
   <div class="upper-data">
-    <img src="../assets/Afternoon.jpg" *ngIf="14>15">
-    <img src="../assets/night.gif" *ngIf="14<=15">
+    <img src="../assets/Afternoon.jpg" *ngIf="isDay">
+    <img src="../assets/night.gif" *ngIf="!isDay">
     <div class="weather-data">
-      <div class=" location">Dhaka</div>
-      <div class="temparature">{{14.40 | number: '1.0-0'}}°C</div>
+      <div class=" location">{{location}}</div>
+      <div class="temparature">{{temp | number: '1.0-0'}}°C</div>
+      <div class="time location">{{time}}</div>
     </div>
 
   </div>
@@ -13,64 +19,20 @@
       More Information
     </div>
     <div class="more-info-container">
-      <div class="info-block">
-        <div class="info-block-label ">
-          <div class="min">
-            <span class="thermo material-symbols-outlined">
-              thermometer
-              <span class="snow-flake material-symbols-outlined">
-                ac_unit
-              </span>
-            </span>
-            
-            <div class="info-block-value">
-              <div><h3>min</h3></div>
-              10°C
-            </div>
-          </div>
-
-
-          <div class="max">
-            <span class="thermo material-symbols-outlined">
-              thermometer
-              <span class="snow-flake material-symbols-outlined">
-                sunny
-              </span>
-            </span>
-            <div class="info-block-value">
-              <div><h3>max</h3></div>
-              40°C
-            </div>
-          </div>
-        </div>
-
-        <div class="info-block-label ">
-          <div class="wind">
-            <span class="thermo material-symbols-outlined">
-              air
-            </span>
-            <div class="info-block-value">
-              <div><h3>wind</h3></div>
-              {{wind_kph}} Km/h
-            </div>
-          </div>
-
-          <div class="max">
-            <span class="thermo material-symbols-outlined">
-              humidity_percentage
-            </span>
-            <div class="info-block-value">
-              <div><h3>water</h3></div>
-              {{humidity}}%
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+      <app-info
+        [humidity]="humidity"
+        [temp]="temp"
+        [feels]="feels"
+        [wind_kph]="wind_kph"
+        *ngIf="page===1"
+      ></app-info>
     </div>
-
+  <div class="more-info-buttons">
+    <div class="links">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+    </div>
   </div>
 </div>
-
-<router-outlet></router-outlet>
+</div>

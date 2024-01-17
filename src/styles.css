@@ -48,6 +48,11 @@ body{
 
 }
 
+.more-info-buttons {
+    border-radius: 20px;
+    background-color: #2c3178;
+}
+
 .upper-data img {
     position: absolute;
     top: 0;
@@ -74,6 +79,10 @@ body{
     font-size: 1.8em;
     font-weight: 200 ;
 
+}
+
+.time {
+    font-size: 1.5em;
 }
 
 .temparature{
@@ -114,7 +123,8 @@ body{
     }
 
 .more-info-container {
-    height: 90%;
+    height: 70%;
+    padding: 10px;
 }
 
 .info-block {
@@ -132,7 +142,57 @@ height: 100%;
 
 }
 
+.thermo {
+    position: relative;
+}
 
+.snow-flake {
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    left: 35px;
+}
 
+.more-info-buttons {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
 
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
 
+.links button {
+    padding: 10px 15px;
+    border-radius: 100%;
+    border: 0;
+    cursor: pointer;
+}
+
+.search-box {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.search-box * {
+    padding: 10px;
+    border: 0;
+}
+
+.search-box input {
+    width: 80%;
+    outline: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.search-box button {
+    width: 20%;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #4C52AD;
+}

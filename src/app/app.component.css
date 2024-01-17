@@ -1,10 +1,11 @@
-.thermo {
-    position: relative;
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
 }
 
-.snow-flake {
-    font-size: 25px;
-    position: absolute;
-    top: 0;
-    left: 35px;
+.links button {
+    padding: 10px 15px;
+    border-radius: 100%;
+    border: 0;
 }
