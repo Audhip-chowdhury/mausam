@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
       this.temp = data.current.temp_c;
       this.feels = data.current.feelslike_c;
       this.time = new Date().toLocaleTimeString('en-US', { timeZone: data.location.tz_id, hour: '2-digit', minute:'2-digit' })
-      this.isDay = this.time.slice(-2)==='AM';
+      this.isDay = data.current.is_day;
     })
   }
 
@@ -40,5 +40,10 @@ export class AppComponent implements OnInit {
 
   onClick(cityName: string) {
     this.getAll(cityName)
+  }
+
+  changePage(page: any) {
+    this.page = page;
+    console.log(this.page)
   }
 }
