@@ -1,0 +1,10 @@
+.thermo {
+    position: relative;
+}
+
+.snow-flake {
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    left: 35px;
+}
