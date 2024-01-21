@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class WeatherService {
   production = false
-  weatherApiBaseUrl = 'http://api.weatherapi.com/v1/current.json'
+  weatherApiBaseUrl = 'https://api.weatherapi.com/v1/current.json'
   apiKey = '1651b7b63e11404d95d54519241701'
 
   constructor(private http: HttpClient) { }
