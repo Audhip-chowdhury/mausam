@@ -16,11 +16,13 @@ export class AppComponent implements OnInit {
   time="00:00 AM";
   isDay=true;
   page=1;
+  showFBForm = false;
   
   constructor(private weatherService: WeatherService)
   {
     
   }
+  
   getAll(cityName = 'Dhaka') {
     this.weatherService.getWeatherData(cityName).subscribe((data: any) => {
       console.log(data);
@@ -45,5 +47,9 @@ export class AppComponent implements OnInit {
   changePage(page: any) {
     this.page = page;
     console.log(this.page)
+  }
+
+  toggleFbForm() {
+    this.showFBForm = !this.showFBForm;
   }
 }

@@ -50,3 +50,7 @@
   </div>
 </div>
 </div>
+<span (click)="toggleFbForm()" class="fb-button material-symbols-outlined">
+  chat
+</span>
+<app-fb-form (toggleFbForm)="toggleFbForm()" *ngIf="showFBForm"></app-fb-form>

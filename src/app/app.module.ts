@@ -7,13 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { InfoComponent } from './info/info.component';
 import { Info2Component } from './info2/info2.component';
 import { Info3Component } from './info3/info3.component';
+import { FbFormComponent } from './fb-form/fb-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoComponent,
     Info2Component,
-    Info3Component
+    Info3Component,
+    FbFormComponent
   ],
   imports: [
     BrowserModule,
