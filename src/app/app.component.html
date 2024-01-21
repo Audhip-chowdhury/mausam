@@ -43,9 +43,9 @@
     </div>
   <div class="more-info-buttons">
     <div class="links">
-      <button (click)="changePage(1)">1</button>
-      <button (click)="changePage(2)">2</button>
-      <button (click)="changePage(3)">3</button>
+      <button (click)="changePage(1)" [ngStyle]="{'background-color': page === 1 ? 'grey' : 'white'}">1</button>
+      <button (click)="changePage(2)" [ngStyle]="{'background-color': page === 2 ? 'grey' : 'white'}">2</button>
+      <button (click)="changePage(3)" [ngStyle]="{'background-color': page === 3 ? 'grey' : 'white'}">3</button>
     </div>
   </div>
 </div>
