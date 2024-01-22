@@ -27,10 +27,12 @@
         *ngIf="page===1"
       ></app-info>
       <app-info2
-        [humidity]="humidity"
-        [temp]="temp"
-        [feels]="feels"
-        [wind_kph]="wind_kph"
+
+        [pressure_mb]="pressure_mb"
+        [wind_dir]="wind_dir"
+        [gust]="gust"
+        [UV]="UV"
+        
         *ngIf="page===2"
       ></app-info2>
       <app-info3

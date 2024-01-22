@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './info2.component.css'
 })
 export class Info2Component {
-  @Input() humidity: any;
-  @Input() wind_kph: any;
-  @Input() temp: any;
-  @Input() feels: any;
+  @Input() pressure_mb: any;
+  @Input() wind_dir: any;
+  @Input() gust: any;
+  @Input() UV: any;
 }

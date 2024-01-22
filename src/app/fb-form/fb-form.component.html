@@ -1,7 +1,7 @@
 <div class="modal-bg">
     <div>Email</div>
-    <input type="text" />
+    <input type="text" #email />
     <div>Feedback</div>
-    <textarea cols="55" rows="7"></textarea>
-    <button (click)="closeModal()">Submit</button>
+    <textarea cols="55" rows="7" #feedback></textarea>
+    <button (click)="closeModal()" (click)="sendFeedback(email.value, feedback.value)">Submit</button>
 </div>

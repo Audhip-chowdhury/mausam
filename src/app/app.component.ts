@@ -17,7 +17,10 @@ export class AppComponent implements OnInit {
   isDay=true;
   page=1;
   showFBForm = false;
-  
+  pressure_mb = 0;
+  wind_dir = 0;
+  gust = 0;
+  UV = 0;
   constructor(private weatherService: WeatherService)
   {
     
@@ -33,6 +36,13 @@ export class AppComponent implements OnInit {
       this.feels = data.current.feelslike_c;
       this.time = new Date().toLocaleTimeString('en-US', { timeZone: data.location.tz_id, hour: '2-digit', minute:'2-digit' })
       this.isDay = data.current.is_day;
+      this.pressure_mb = data.current.pressure_mb;
+      this.wind_dir = data.current.wind_dir;
+      this.gust = data.current.gust_mph;
+      this.UV = data.current.uv;
+
+
+
     })
   }
 
